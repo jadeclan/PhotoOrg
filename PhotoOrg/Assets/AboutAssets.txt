@@ -1,0 +1,19 @@
+Steps for creating an Android App that uses an SQLite database
+
+1) Create blank Android project
+2) Design Home page Layout (Desired Database Functionality)
+3) Add references - Mono.Data.Sqlite and System.Data
+4) Add SQLite-net package using Tools-> NuGet Package Manager (tricky step)
+5) Add a new Folder called ORM and add SQLite.cs and SQLiteAsync.cs to it
+6) Create a class to hold the db functionality in the ORM folder
+7) Create a class to hold a table in the ORM folder
+8) Build the DB functionality 1 at a time
+	a) create db
+	b) create table
+	c) insert record 
+		i) need a layout first
+		ii) need an activity to handle the addition (get the input data)
+		iii) need to hook up the Main add button to start the activity
+	d) get all records
+	e) get by id
+	f) update a record
