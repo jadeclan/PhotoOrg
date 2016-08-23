@@ -1,13 +1,7 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 using Android.App;
-using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Views;
 using Android.Widget;
 using PhotoOrg.ORM;
 
@@ -27,11 +21,17 @@ namespace PhotoOrg
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            DBRepo dbr = new ORM.DBRepo();
             EditText txtPhotoId = FindViewById<EditText>(Resource.Id.txtDeleteID);
+            // TODO: Input validation
+            DBAdapter db = new DBAdapter(this);
+            db.OpenDB();
+            if (!db.deleteRecord(int.Parse(txtPhotoId.Text)))
+            {
+                Toast.MakeText(this, "Deletion Failed", ToastLength.Long).Show();
+            }
+            db.CloseDB();
 
-            string result = dbr.deleteRecord(int.Parse(txtPhotoId.Text));
-            Toast.MakeText(this, result, ToastLength.Long).Show();
+            StartActivity(typeof(MainActivity));
         }
     }
 }

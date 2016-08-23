@@ -9,7 +9,9 @@ using PhotoOrg.ORM;
 
 namespace PhotoOrg
 {
-    [Activity(Label = "Photo Organizer", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity( Label = "Photo Organizer", 
+        MainLauncher = true, 
+                Icon = "@drawable/photoOrganizer")]
     public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)
@@ -18,17 +20,6 @@ namespace PhotoOrg
 
             // Set our view from the "home" layout resource
             SetContentView(Resource.Layout.Home);
-
-            // Create the database (note the using PhotoOrg.ORM above)
-            DBRepo dbr = new DBRepo();
-            var result = dbr.createDB();
-            // Popup message that disappears in a Short time.
-            Toast.MakeText(this, result, ToastLength.Short).Show();
-
-            // Create the Photos table
-            result = dbr.createTable ();
-            // Popup message that disappears in a Long time.
-            Toast.MakeText(this, result, ToastLength.Long).Show();
 
             // To insert the record
             Button btnAddRecord = FindViewById<Button>(Resource.Id.btnAdd);
@@ -68,9 +59,7 @@ namespace PhotoOrg
 
         private void btnGetAll_Click(object sender, EventArgs e)
         {
-            DBRepo dbr = new DBRepo();
-            var result = dbr.getAllRecords();
-            Toast.MakeText(this, result, ToastLength.Long).Show();
+            StartActivity(typeof(ListAllActivity));
         }
 
         private void btnAddRecord_Click(object sender, EventArgs e)

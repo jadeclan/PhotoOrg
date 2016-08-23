@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+        <ImageView
+            android:src="@drawable/photoNotFound"
+            android:layout_width="match_parent"
+            android:layout_height="265dp"
+            android:id="@+id/singleImageView" />
+        <TextView
+            android:text="Image Name"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/singleImageNameTextView"
+            android:layout_gravity="center_horizontal" />
+        <TextView
+            android:text="Date Photo was Taken"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/singleImageDateTextView" />
+    </LinearLayout>
+    <TextView
+        android:text="Where the Photo was Taken"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/singleImageLocationTextView" />
+    <TextView
+        android:text="People in the photo"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/singleImagePeopleTextView" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2">
+        <TextView
+            android:text="Latitude: "
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/singleImageTextView1" />
+        <TextView
+            android:text="Latitude"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/singleImageLatitudeTextView" />
+        <TextView
+            android:text="Longitude: "
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/singleImageTextView2"
+            android:paddingLeft="50dp" />
+        <TextView
+            android:text="Longitude"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/singleImageLongitudeTextView" />
+    </LinearLayout>
+</LinearLayout>

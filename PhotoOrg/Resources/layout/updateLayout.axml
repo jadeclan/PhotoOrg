@@ -24,39 +24,65 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnIdSearch" />
+    <ImageView android:layout_width="match_parent"
+             android:layout_height="150dp"
+             android:visibility="gone"
+             android:src="@drawable/photoNotFound"
+             android:id="@+id/imageSelected"
+             android:layout_centerInParent="true"  />
+    <TextView
+      android:text="Name"
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/textView6"
+      android:visibility="gone" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtName"
+        android:visibility="gone" />
     <TextView
         android:text="Date"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView3" />
+        android:id="@+id/textView3"
+        android:visibility="gone" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtDate" />
+        android:id="@+id/txtDate"
+        android:visibility="gone" />
     <TextView
         android:text="Location"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView4" />
+        android:id="@+id/textView4"
+        android:visibility="gone" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtLocation" />
+        android:id="@+id/txtLocation"
+        android:visibility="gone" />
     <TextView
         android:text="People"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView5" />
+        android:id="@+id/textView5"
+        android:visibility="gone" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtPeople" />
+        android:id="@+id/txtPeople"
+        android:visibility="gone" />
     <Button
         android:text="Update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnUpdate" />
+        android:id="@+id/btnUpdate"
+        android:visibility="gone"
+        android:enabled="false"/>
 </LinearLayout>

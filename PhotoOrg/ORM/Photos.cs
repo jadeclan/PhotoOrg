@@ -10,14 +10,13 @@ namespace PhotoOrg.ORM
     {
         // TODO: implement getting lat/long based on location
         // TODO: implement setting picture path
-        [PrimaryKey, AutoIncrement]
         public int Id{get;set;}
+        public string Name { get; set; }
         public string Date { get; set; }
-        [MaxLength(50)]
         public string Location { get; set; }
         public string People { get; set; }
-        public float? Latitude { get; set; }
-        public float? Longitude { get; set; }
+        public string Latitude { get; set; }
+        public string Longitude { get; set; }
         public string PicturePath { get; set; }
     }
 }

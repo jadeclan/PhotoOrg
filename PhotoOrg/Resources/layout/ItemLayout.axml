@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:minWidth="25px"
+    p1:minHeight="25px"
+    p1:layout_width="match_parent"
+    p1:layout_height="wrap_content"
+    p1:id="@+id/relativeLayout1"
+    p1:padding="5dp">
+    <ImageView
+        p1:src="@drawable/photoNotFound"
+        p1:layout_width="65dp"
+        p1:layout_height="65dp"
+        p1:id="@+id/listImageView"
+        p1:layout_centerVertical="true" />
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:layout_toRightOf="@id/listImageView"
+        p1:id="@+id/linearLayout1"
+        p1:layout_centerVertical="true"
+        p1:padding="5dp">
+        <TextView
+            p1:text="Name Unknown"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/nameTextView"
+            p1:textSize="22sp"
+            p1:textColor="#ffffff00" />
+        <TextView
+            p1:text="Location Unknown"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/locationTextView"
+            p1:textSize="14sp" />
+    </LinearLayout>
+    <TextView
+        p1:text="Date Unknown"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:layout_toLeftOf="@id/listImageView"
+        p1:id="@+id/dateTextView"
+        p1:textSize="14sp"
+        p1:layout_alignParentRight="true"
+        p1:layout_centerVertical="true"
+        p1:padding="5dp" />
+</RelativeLayout>

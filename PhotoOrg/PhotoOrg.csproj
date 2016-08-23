@@ -51,10 +51,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ORM\DBBitmapUtility.cs" />
+    <Compile Include="PhotosAdapter.cs" />
     <Compile Include="DeleteActivity.cs" />
     <Compile Include="InsertPhoto.cs" />
+    <Compile Include="ListAllActivity.cs" />
     <Compile Include="MainActivity.cs" />
-    <Compile Include="ORM\DBRepo.cs" />
+    <Compile Include="ORM\Constants.cs" />
+    <Compile Include="ORM\DBAdapter.cs" />
+    <Compile Include="ORM\DBHelper.cs" />
     <Compile Include="ORM\Photos.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -64,7 +69,6 @@
     <Compile Include="UpdatePhotoActivity.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="GettingStarted.Xamarin" />
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
@@ -83,6 +87,15 @@
     <AndroidResource Include="Resources\layout\DeletionLayout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\ItemLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\PhotoList.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\SinglePhotoLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
@@ -92,6 +105,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\photoOrganizer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\photoNotFound.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
